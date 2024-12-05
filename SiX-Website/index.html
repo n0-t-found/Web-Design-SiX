@@ -1,0 +1,60 @@
+<!-- Este é um comentário -->
+<!-- (c) Carolina Santos, Inês Cruz, Iria Paulina, Miriam Jamal, 2024-11-15, LDC, FBAUP -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Website Title</title>
+</head>
+<body>
+  <!-- ... BEGINNING OF HEADER SECTION ... -->
+    <header>
+        <div class="header-title">SiX</div>
+        <!-- ... END OF LOGO ... -->
+        <nav class="nav-menu">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">About</div>
+            <div class="nav-item">Members</div>
+            <div class="nav-item">Research</div>
+            <div class="nav-item">Activities</div>
+            <div class="nav-item">Workshops</div>
+            <div class="nav-item">Output</div>
+            <div class="nav-item">Publications</div>
+            <div class="nav-item">Credits</div>
+        </nav>
+        <!-- ... FOR MOBILE ... -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <!-- ... END FOR MOBILE ... -->
+    </header>
+    <!-- ... END OF HEADER SECTION ... -->
+     
+    <!-- ... SCRIPT FOR MENU TOGGLE FUNCTION ... -->
+    <script>
+    function toggleMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+    }
+    </script>
+    <!-- ... END OF SCRIPT FOR MENU TOGGLE FUNCTION ... -->
+
+    <!-- ... BEGINNING OF PROJECT SECTION ... -->
+    <section class="project-section">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <!-- Content will be added later -->
+    </section>
+    <!-- ... END OF PROJECT SECTION ... -->
+</body>
+</html>

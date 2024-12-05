@@ -1,0 +1,257 @@
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden; /* Hide horizontal overflow */
+    background-color: #FFFBF4; /* Set the background color for the entire page */
+}
+
+/* ... BEGINING OF HEADER SECTION...  */
+header {
+    height: 100px; /* Further reduced height for a smaller header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem; /* Reduced padding for a smaller header */
+}
+
+.header-title {
+    font-family: 'Swis721 BT', sans-serif;
+    font-weight: bold;
+    font-size: 2rem; /* Reduced font size for a smaller title */
+    color: #F05454;
+}
+/* ... END OF HEADER SECTION...  */
+
+/* ... BEGINING OF NAV MENU SECTION...  */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #F05454; /* Stroke color */
+    border-radius: 100px; /* Rounded frame */
+    padding: 0.3rem 0.5rem; /* Reduced padding for a smaller nav menu */
+    position: absolute; /* Positioning to center it */
+    left: 50%; /* Move to the center */
+    transform: translateX(-50%); /* Adjust for the width of the menu */
+}
+
+.nav-item {
+    color: #F05454;
+    font-family: 'Swis721 BT', sans-serif;
+    font-size: 1.5rem; /* Reduced font size for smaller nav items */
+    margin: 0 0.5rem; /* Reduced margin for smaller spacing */
+    cursor: pointer; /* Indicate that the text is clickable */
+}
+/* ... END OF NAV MENU SECTION...  */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.75rem; /* Further adjust font size for smaller screens */
+    }
+    .nav-item {
+        font-size: 1.25rem; /* Further adjust font size for smaller screens */
+    }
+}
+
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack bars vertically */
+    cursor: pointer; /* Indicate that it's clickable */
+    width: 36px; /* Reduced width for a less stretched appearance */
+    height: 44px; /* Minimum height */
+}
+/* ... HAMBURGUER 3 BARS ...*/
+.bar {
+    height: 4px; /* Height of each bar */
+    width: 100%; /* Full width */
+    background-color: #F05454; /* Color of the bars */
+    border-radius: 100px; /* Rounded corners */
+    margin: 3px 0; /* Space between bars */
+}
+/* ... END OF HAMBURGUER 3 BARS ...*/
+
+/* ...Responsive CELLPHONE adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide nav menu by default on mobile */
+        flex-direction: column; /* Stack items vertically in dropdown */
+        position: absolute; /* Positioning for dropdown */
+        top: 50px; /* Position below the hamburger menu */
+        right: 0; /* Align to the right */
+        width: 200px; /* Set a fixed width for the dropdown */
+        background-color: white; /* Background color for dropdown */
+        border: 3px solid #F05454; /* Border color */
+        border-radius: 10px; /* Rounded corners for dropdown */
+        z-index: 1000; /* Ensure it appears above other content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a window effect */
+    }
+    .nav-menu.active {
+        display: flex; /* Show nav menu when active */
+    }
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on mobile */
+    }
+}
+/* ...END OF Responsive CELLPHONE adjustments */
+
+/* ... BEGINNING OF PROJECT SECTION ... */
+.project-section {
+    position: relative; /* Position relative for absolute positioning of bubbles */
+    overflow: visible; /* Allow bubbles to overflow the section */
+    height: 500px; /* Set a height for the section */
+}
+
+/* Bubbles */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5; /* Vary opacity */
+    filter: blur(30px); /* Blurry effect */
+    animation: move 10s infinite alternate; /* Animation for movement */
+    mix-blend-mode: hard-light; /* Hard light effect */
+}
+
+/* Keyframes for bubble movement */
+@keyframes move {
+    0% {
+        transform: translate(0, 0); /* Original position */
+    }
+    100% {
+        transform: translate(calc(10px * (random() - 0.5)), calc(10px * (random() - 0.5))); /* Slight movement */
+    }
+}
+
+/* Fixed position and size bubbles */
+.bubble:nth-child(1) { /*1ST RED BUBBLE ON 1ST EXPLANATION*/
+    background: linear-gradient(135deg, rgba(240, 84, 84, 0.9), rgba(138, 48, 48, 1)); /* Diagonal gradient */
+    width: 221px; /* Fixed size */
+    height: 221px; /* Fixed size */
+    top: 100px; /* Updated Y position */
+    left: 212.71px; /* Updated X position */
+    animation: float 10s infinite alternate; /* Animation for gentle movement */
+}
+
+/* Keyframes for bubble movement */
+@keyframes float {
+    0% {
+        transform: translate(0, 0); /* Original position */
+    }
+    100% {
+        transform: translate(200px, -100px); /* Slight movement */
+    }
+}
+
+.bubble:nth-child(2) {
+    background: linear-gradient(135deg, #FBB607, #FFE5B3);
+    width: 120px; /* Fixed size */
+    height: 120px; /* Fixed size */
+    top: 30%;
+    left: 50%;
+}
+
+.bubble:nth-child(3) {
+    background: angular-gradient(45deg, #86AEE2, #B3E0FF);
+    width: 90px; /* Fixed size */
+    height: 90px; /* Fixed size */
+    top: 60%;
+    left: 70%;
+}
+
+.bubble:nth-child(4) {
+    background: radial-gradient(circle, #A168E7, #D6B3E7);
+    width: 200px; /* Fixed size */
+    height: 200px; /* Fixed size */
+    top: 20%;
+    left: 80%;
+}
+
+.bubble:nth-child(5) {
+    background: linear-gradient(135deg, #632CFD, #D1B3FF);
+    width: 250px; /* Fixed size */
+    height: 250px; /* Fixed size */
+    top: 50%;
+    left: 90%; /* Concentrated on the right */
+}
+
+.bubble:nth-child(6) {
+    background: angular-gradient(45deg, #3B61D4, #A3C1E0);
+    width: 300px; /* Fixed size */
+    height: 300px; /* Fixed size */
+    top: 70%;
+    left: 85%; /* Concentrated on the right */
+}
+
+.bubble:nth-child(7) {
+    background: radial-gradient(circle, #86AEE2, #B3E0FF);
+    width: 400px; /* Fixed size */
+    height: 400px; /* Fixed size */
+    top: 40%;
+    left: 60%; /* Concentrated on the right */
+}
+
+/* Additional smaller bubbles for more frequency */
+.bubble:nth-child(8) {
+    background: radial-gradient(circle, #F05454, #FFB3B3);
+    width: 50px; /* Fixed size */
+    height: 50px; /* Fixed size */
+    top: 15%;
+    left: 10%;
+}
+
+.bubble:nth-child(9) {
+    background: linear-gradient(135deg, #FBB607, #FFE5B3);
+    width: 40px; /* Fixed size */
+    height: 40px; /* Fixed size */
+    top: 25%;
+    left: 30%;
+}
+
+.bubble:nth-child(10) {
+    background: angular-gradient(45deg, #86AEE2, #B3E0FF);
+    width: 30px; /* Fixed size */
+    height: 30px; /* Fixed size */
+    top: 35%;
+    left: 50%;
+}
+
+.bubble:nth-child(11) {
+    background: radial-gradient(circle, #A168E7, #D6B3E7);
+    width: 20px; /* Fixed size */
+    height: 20px; /* Fixed size */
+    top: 45%;
+    left: 70%;
+}
+
+.bubble:nth-child(12) {
+    background: linear-gradient(135deg, #632CFD, #D1B3FF);
+    width: 25px; /* Fixed size */
+    height: 25px; /* Fixed size */
+    top: 55%;
+    left: 80%;
+}
+
+.bubble:nth-child(13) {
+    background: radial-gradient(circle, #FBB607, #FFE5B3);
+    width: 15px; /* Fixed size */
+    height: 15px; /* Fixed size */
+    top: 5%;
+    left: 5%;
+}
+
+.bubble:nth-child(14) {
+    background: angular-gradient(45deg, #3B61D4, #A3C1E0);
+    width: 10px; /* Fixed size */
+    height: 10px; /* Fixed size */
+    top: 80%;
+    left: 15%;
+}
+
+.bubble:nth-child(15) {
+    background: radial-gradient(circle, #86AEE2, #B3E0FF);
+    width: 12px; /* Fixed size */
+    height: 12px; /* Fixed size */
+    top: 90%;
+    left: 25%;
+}
+
+/* ... END OF PROJECT SECTION ... */
